@@ -1,0 +1,43 @@
+-- Calculate that total spend for each customer
+SELECT o.transaction_id, 
+        o.customer_id,
+        o.ORDER_id,
+        o.units,
+        p.unit_price
+FROM orders AS o
+LEFT JOIN products AS p
+    ON o.product_id = p.product_id;
+
+
+SELECT 
+        o.customer_id,
+        SUM(o.units*p.unit_price) AS total_spend 
+FROM orders AS o
+LEFT JOIN products AS p
+    ON o.product_id = p.product_id
+GROUP BY o.customer_id;
+
+-- Put the spend into bins of $0-$10, $10-$20, etc.
+SELECT 
+        o.customer_id,
+        SUM(o.units*p.unit_price) AS total_spend ,
+        floor(SUM(o.units*p.unit_price)/10)*10 AS total_spend_bin
+FROM orders AS o
+LEFT JOIN products AS p
+    ON o.product_id = p.product_id
+GROUP BY o.customer_id;
+
+-- Number of customers in each spend bin
+WITH bin AS (SELECT 
+                o.customer_id,
+                SUM(o.units*p.unit_price) AS total_spend,
+                floor(SUM(o.units*p.unit_price)/10)*10 AS total_spend_bin
+            FROM orders AS o
+            LEFT JOIN products AS p
+                ON o.product_id = p.product_id
+            GROUP BY o.customer_id)
+SELECT total_spend_bin,
+        count(customer_id) AS num_customers
+FROM bin
+GROUP BY total_spend_bin
+ORDER BY total_spend_bin;
