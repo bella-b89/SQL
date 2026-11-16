@@ -11,6 +11,7 @@ This repository contains my SQL practice exercises and projects.
 - Common Table Expressions (CTE)
 - GROUP BY and Aggregate Functions
 - Data Analysis
+- Datetime functions
 
 ## Tools
 
