@@ -12,6 +12,12 @@ This repository contains my SQL practice exercises and projects.
 - GROUP BY and Aggregate Functions
 - Data Analysis
 - Datetime functions
+- String Functions:
+  - REPLACE ()
+  - CONCAT()
+  - SUBSTR() , INSTR(),
+  - REGEXP_SUBSTR() -- make program slower
+  - LIKE 
 
 ## Tools
 
