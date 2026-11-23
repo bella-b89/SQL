@@ -17,10 +17,16 @@ This repository contains my SQL practice exercises and projects.
   - CONCAT()
   - SUBSTR() , INSTR(),
   - REGEXP_SUBSTR() -- make program slower
-  - LIKE 
+  - LIKE
+  - COALESCE()
+- DATA analysis Applications
+  - Duplicate Values
+  - MIN / MAX Value Filtering
+  - Pivoting
+  - Rolling Caculations
+  - Imputing NULL values
 
 ## Tools
-
 - MySQL
 - DBeaver
 - GitHub
