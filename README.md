@@ -22,7 +22,7 @@ This repository contains my SQL practice exercises and projects.
 - DATA analysis Applications
   - Duplicate Values
   - MIN / MAX Value Filtering
-  - Pivoting
+  - Pivoting: let transform rows into columns to summarize the data
   - Rolling Caculations
   - Imputing NULL values
 
