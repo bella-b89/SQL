@@ -25,7 +25,7 @@ This repository contains my SQL practice exercises and projects.
   - Pivoting: let transform rows into columns to summarize the data
   - Rolling Caculations
   - Imputing NULL values
-
+  - WITH ROLLUP
 ## Tools
 - MySQL
 - DBeaver
